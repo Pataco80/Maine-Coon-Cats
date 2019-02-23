@@ -74,5 +74,18 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-less',
+      options: {
+        modifyVars: require('./src/theme/antd.js'),
+        javascriptEnabled: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-antd',
+      options: {
+        style: true
+      }
+    }
   ],
 }
