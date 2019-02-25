@@ -77,14 +77,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-less',
       options: {
-        modifyVars: require('./src/theme/antd.js'),
-        javascriptEnabled: true
+        modifyVars: require('./src/theme.js'),
+        javascriptEnabled: true,
       }
     },
     {
       resolve: 'gatsby-plugin-antd',
       options: {
-        style: true
+        style: true,
       }
     }
   ],

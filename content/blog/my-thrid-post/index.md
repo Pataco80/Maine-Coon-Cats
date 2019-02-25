@@ -1,5 +1,5 @@
 ---
-title: My Thrid Post!
+title: My Thrid2 Post!
 date: "2015-05-06T23:46:37.121Z"
 featuredImage: "./salty_egg.jpg"
 ---
