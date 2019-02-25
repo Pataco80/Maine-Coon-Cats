@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Layout, Menu, Icon } from "antd"
-import "../theme"
+import "../theme/index"
 import { rhythm, scale } from "../utils/typography"
 import "./layout.css"
 

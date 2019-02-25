@@ -1,4 +1,4 @@
 // custom typefaces
 import "typeface-montserrat"
 import "typeface-merriweather"
-import "./src/theme"
+import "./src/theme/index"
