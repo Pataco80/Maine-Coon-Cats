@@ -1,9 +1,10 @@
 import React from "react"
+//import { rhythm, scale } from "../utils/typography"
 import { Link } from "gatsby"
+
 import MainNavigation from "./mainNavigation"
-import { Layout, Icon } from "antd"
-import "../theme/index"
-import { rhythm, scale } from "../utils/typography"
+import FooterSite from "./footer"
+import { Layout } from "antd"
 import "./layout.css"
 
 
@@ -14,7 +15,7 @@ const {
 class AppLayout extends React.Component {
 
   state = {
-    collapsed: false,
+    collapsed: true,
   };
 
   toggle = () => {
@@ -30,41 +31,16 @@ class AppLayout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
+        <h1>
+          <Link to={`/`}>
             {title}
           </Link>
         </h1>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
+        <h3>
+          <Link to={`/`}>
             {title}
           </Link>
         </h3>
@@ -81,38 +57,33 @@ class AppLayout extends React.Component {
         }}
       >
         <Layout>
-          <Sider
-            breakpoint="lg"
-            collapsedWidth="0"
-            trigger={null}
-            collapsible
-            collapsed={this.state.collapsed}
-            onBreakpoint={(broken) => { console.log(broken); }}
-            onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
-          >
-            <div className="logo" />
-            <MainNavigation />
-          </Sider>
-
+          <Header>{header}</Header>
           <Layout>
-            <Header><Icon
-              className="trigger"
-              type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-              onClick={this.toggle}
-            />{header}</Header>
-            <Content style={{ padding: `6rem 1rem 1rem 1rem` }}>{children}</Content>
-            <Footer>
-              © {new Date().getFullYear()}, Built with
-          {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </Footer>
+            <Sider
+              theme="light"
+              breakpoint="md"
+              collapsedWidth="0"
+              onBreakpoint={(broken) => { console.log(broken); }}
+              onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
+            >
+              <div className="logo" />
+              <MainNavigation />
+            </Sider>
+            <Content style={{ padding: `4rem 1rem 1rem 1rem` }}>{children}</Content>
           </Layout>
 
+
+
+
+          <Footer>
+            <FooterSite />
+          </Footer>
         </Layout>
 
 
 
-      </div>
+
+      </div >
     )
   }
 }

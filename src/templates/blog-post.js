@@ -1,10 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import AppLayout from "../components/appLayout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import Image from "gatsby-image"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -26,13 +26,14 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
+        <Image sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <p>Tags:{post.frontmatter.tags}</p>
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
 
         <ul
           style={{
@@ -81,6 +82,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
+        featuredImage {
+          childImageSharp{
+              sizes(maxWidth: 630) {
+                  ...GatsbyImageSharpSizes
+              }
+          }
+      }
       }
     }
   }

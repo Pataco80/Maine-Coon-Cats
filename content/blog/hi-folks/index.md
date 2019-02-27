@@ -2,6 +2,8 @@
 title: New Beginnings
 date: "2015-05-28T22:40:32.169Z"
 featuredImage: "./salty_egg.jpg"
+image: "./profile.png"
+tags: ["animals", "Chicago", "zoos"]
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

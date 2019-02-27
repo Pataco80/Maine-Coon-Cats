@@ -34,6 +34,7 @@ class BlogIndex extends React.Component {
               <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <p>Tags:{node.frontmatter.tags}</p>
             </div>
           )
         })}
@@ -63,6 +64,7 @@ export const blogQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            tags
             featuredImage {
                 childImageSharp{
                     sizes(maxWidth: 630) {

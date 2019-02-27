@@ -1,10 +1,80 @@
+h1,
+h2,
+h2,
+h4,
+h5,
+h6 {
+  color: #745844;
+}
+a, a:hover{
+  color: #745844;
+  font-weight: bold;
+}
+a:hover {
+text-shadow: 0 2px 8px rgba(116, 88, 68, 0.5);
+}
+.ant-layout {
+  background-color: #f7f4f2;
+  flex: column wrap;
+}
+
+.ant-layout-header {
+  height: auto;
+  display: flex;
+  align-self: stretch;
+  background-color: #745844;
+}
+
+.ant-layout-header h1,
+.ant-layout-header h3 {
+  flex-grow: 2;
+  justify-content: center;
+  margin-top: 0.5em;
+  margin-left: 0;
+  text-align: center;
+}
+
+.ant-layout-header h1 a,
+.ant-layout-header h3 a {
+  text-align: center;
+  width: 100%;
+  color: #FFF !important;
+}
+
 .ant-layout-header .trigger {
   font-size: 18px;
   line-height: 64px;
-  padding: 0 24px;
+  padding: 0 24px 0 0;
   cursor: pointer;
   color: #FFF;
   transition: color .3s;
+  display: flex;
+  align-self: center;
+}
+
+.ant-layout-sider .ant-layout-sider-zero-width-trigger {
+  position: absolute !important;
+  top: -4rem !important;
+  right: -50px !important;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.ant-layout-sider:not(.ant-layout-sider-collapsed) .ant-layout-sider-zero-width-trigger {
+  position: absolute !important;
+  top: -4rem !important;
+  right: 150px !important;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.ant-layout-sider {
+  background-color: #e0d0c0;
+}
+
+.ant-layout-sider .ant-menu-root {
+  padding-top: 4rem;
+  background-color: #e0d0c0;
 }
 
 .ant-layout-header .trigger:hover {
@@ -16,3 +86,51 @@
   background: rgba(255, 255, 255, 1);
   margin: 16px;
 }
+
+.bio {
+  margin-bottom: 30px;
+}
+
+.bio .sign-bio {
+  margin-top: 30px;
+}
+
+.bio .image-profile-bio {
+  margin-top: 10px;
+}
+
+.latest-post .card-post {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.latest-post .card-post:hover {
+  padding: 0 !important;
+}
+
+.latest-post .card-post .ant-card-hoverable {
+  height: 100%;
+  border-color: rgba(116, 88, 68, 1);
+}
+
+.latest-post .card-post .ant-card-hoverable:hover {
+  box-shadow: 0 2px 8px rgba(116, 88, 68, 1);
+}
+
+.latest-post .card-post .ant-card-cover {
+  padding: 15px;
+}
+
+.latest-post .card-post .ant-card-meta-title,
+.latest-post .card-post .ant-card-meta-title>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-post .card-post .ant-card-meta-title .date {
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {}
