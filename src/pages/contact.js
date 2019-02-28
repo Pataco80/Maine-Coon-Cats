@@ -53,6 +53,7 @@ export default class ContactPage extends React.Component {
           title="Contact"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+        <h1 style={{ textAlign: "center" }}>Contactez-moi</h1>
         <form layout={formLayout} onSubmit={this.handleSubmit}>
           <Form.Item
             label="Prénom"

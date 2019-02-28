@@ -17,6 +17,28 @@ a:hover {
   text-shadow: 0 2px 8px rgba(116, 88, 68, 0.5);
 }
 
+.ant-form-item-control .ant-btn-primary {
+  color: #fff;
+  background-color: #745844;
+  border: none;
+}
+
+.ant-form-item-control .ant-btn-primary:hover {
+  box-shadow: 0 2px 8px rgba(116, 88, 68, 1);
+  background-color: #745844;
+}
+
+.ant-form-item-control .ant-input {
+  border-color: #745844;
+}
+
+.ant-form-item-control .ant-input:hover,
+.ant-form-item-control .ant-input:focus,
+.ant-form-item-control .an-input:active {
+  box-shadow: 0 2px 8px rgba(116, 88, 68, 1);
+  border-color: #745844;
+}
+
 .ant-layout {
   background-color: #f7f4f2;
   flex: column wrap;
