@@ -18,6 +18,9 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+        <Row>
+          <h1 style={{ textAlign: "center", marginBottom: "1.5rem" }}><strong>Blog</strong></h1>
+        </Row>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -50,7 +53,6 @@ class BlogIndex extends React.Component {
 
               </Col>
             </Row>
-
           )
         })}
       </AppLayout>
