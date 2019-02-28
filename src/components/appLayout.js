@@ -69,7 +69,7 @@ class AppLayout extends React.Component {
               <div className="logo" />
               <MainNavigation />
             </Sider>
-            <Content style={{ padding: `4rem 1rem 1rem 1rem` }}>{children}</Content>
+            <Content>{children}</Content>
           </Layout>
 
 

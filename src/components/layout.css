@@ -87,16 +87,29 @@ a:hover {
   color: #FFF;
 }
 
+.ant-layout-sider .ant-menu .ant-menu-item {
+  padding: 0 !important;
+}
+
+.ant-layout-sider .ant-menu .ant-menu-item a {
+  padding: 0 1.5rem;
+  color: #745844;
+  width: 100%;
+}
+
 .ant-layout-sider .ant-menu .ant-menu-item::after {
   border: none;
 }
 
-.ant-layout-sider .ant-menu .ant-menu-item:hover {
+.ant-layout-sider .ant-menu .ant-menu-item:hover,
+.ant-layout-sider .ant-menu .ant-menu-item a:hover {
   background-color: rgba(116, 88, 68, 0.5);
-  color: #745844;
+  color: #FFF;
 }
 
-.ant-layout-sider .ant-menu .ant-menu-item-selected {
+.ant-layout-sider .ant-menu .ant-menu-item-selected,
+.ant-layout-sider .ant-menu .ant-menu-item-selected:hover,
+.ant-layout-sider .ant-menu .ant-menu-item-selected a {
   background-color: #745844;
   color: #fff;
 }
@@ -110,6 +123,10 @@ a:hover {
 .ant-layout-footer {
   background-color: #745844;
   color: #fff;
+}
+
+.ant-layout-content {
+  padding: 4rem 1rem 1rem 1rem;
 }
 
 .bio {
@@ -211,4 +228,9 @@ list-posts .posts .gatsby-image-wrapper {
   box-shadow: 0 2px 8px rgba(116, 88, 68, 1);
 }
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+  .ant-layout-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
