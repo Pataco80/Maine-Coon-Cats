@@ -147,6 +147,10 @@ a:hover {
   color: #fff;
 }
 
+.ant-layout-footer a {
+  color: #fff;
+}
+
 .ant-layout-content {
   padding: 4rem 1rem 1rem 1rem;
 }

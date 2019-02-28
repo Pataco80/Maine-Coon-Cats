@@ -5,9 +5,9 @@ class FooterSite extends React.Component {
   render() {
     return (
       <Row type="flex" justify="center">
-        <Col style={{ backgroundColor: "blue" }} xs={24} sm={12} md={8} > Part -1</Col>
-        <Col style={{ backgroundColor: "red" }} xs={24} sm={12} md={8}>Part -2</Col>
-        <Col style={{ backgroundColor: "green" }} xs={24} sm={16} md={8}>© {new Date().getFullYear()}, Built with
+        <Col xs={24} sm={12}>© Maine Coon Cat's</Col>
+        <Col xs={24} sm={12}>Dernière mise à jour, le {new Date().toLocaleDateString()}</Col>
+        <Col xs={24}>Site Construit avec
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a></Col>
       </Row>
