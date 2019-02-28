@@ -6,13 +6,17 @@ h5,
 h6 {
   color: #745844;
 }
-a, a:hover{
+
+a,
+a:hover {
   color: #745844;
   font-weight: bold;
 }
+
 a:hover {
-text-shadow: 0 2px 8px rgba(116, 88, 68, 0.5);
+  text-shadow: 0 2px 8px rgba(116, 88, 68, 0.5);
 }
+
 .ant-layout {
   background-color: #f7f4f2;
   flex: column wrap;
@@ -70,21 +74,42 @@ text-shadow: 0 2px 8px rgba(116, 88, 68, 0.5);
 
 .ant-layout-sider {
   background-color: #e0d0c0;
+  box-shadow: 3px 0px 10px rgba(116, 88, 68, 1);
 }
 
 .ant-layout-sider .ant-menu-root {
   padding-top: 4rem;
   background-color: #e0d0c0;
+  border: none;
 }
 
 .ant-layout-header .trigger:hover {
   color: #FFF;
 }
 
+.ant-layout-sider .ant-menu .ant-menu-item::after {
+  border: none;
+}
+
+.ant-layout-sider .ant-menu .ant-menu-item:hover {
+  background-color: rgba(116, 88, 68, 0.5);
+  color: #745844;
+}
+
+.ant-layout-sider .ant-menu .ant-menu-item-selected {
+  background-color: #745844;
+  color: #fff;
+}
+
 .ant-layout-header .logo {
   height: 32px;
   background: rgba(255, 255, 255, 1);
   margin: 16px;
+}
+
+.ant-layout-footer {
+  background-color: #745844;
+  color: #fff;
 }
 
 .bio {
@@ -103,6 +128,7 @@ text-shadow: 0 2px 8px rgba(116, 88, 68, 0.5);
   margin-bottom: 15px;
   padding: 10px;
 }
+
 .latest-post .card-post:hover {
   padding: 0 !important;
 }
@@ -131,6 +157,58 @@ text-shadow: 0 2px 8px rgba(116, 88, 68, 0.5);
   justify-content: flex-end;
   font-style: italic;
   margin-bottom: 15px;
+}
+
+.list-posts {
+  margin-bottom: 1rem;
+}
+
+.list-posts .posts-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.list-posts .posts-container:hover {
+  padding: 0.5rem;
+}
+
+.list-posts .posts {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(116, 88, 68, 1);
+  padding: 1rem;
+}
+
+.list-posts .posts h3 {
+  width: 100%;
+}
+
+.list-posts .posts .post-content {
+  margin-top: 0.5rem;
+}
+
+list-posts .posts .gatsby-image-wrapper {
+  margin-right: 1.75rem;
+}
+
+.list-posts .posts .post-content .post-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.list-posts .post-info button {
+  display: flex;
+  align-self: flex-end;
+  color: #fff;
+  background-color: #745844;
+  border: none;
+}
+
+.list-posts .post-info button:hover {
+  box-shadow: 0 2px 8px rgba(116, 88, 68, 1);
 }
 
 @media screen and (min-width: 768px) {}
