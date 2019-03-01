@@ -48,7 +48,7 @@ export default class ContactPage extends React.Component {
     const { TextArea } = Input;
 
     return (
-      <AppLayout location={this.props.location} title={siteTitle}>
+      <AppLayout page="3" location={this.props.location} title={siteTitle}>
         <SEO
           title="Contact"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
