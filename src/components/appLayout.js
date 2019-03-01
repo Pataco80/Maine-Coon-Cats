@@ -1,9 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import MainNavigation from "./mainNavigation"
 import FooterSite from "./footer"
-import { Layout } from "antd"
+import { Layout, Menu, Icon } from "antd"
 import "./layout.css"
 
 
@@ -66,7 +65,27 @@ class AppLayout extends React.Component {
               onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
             >
               <div className="logo" />
-              <MainNavigation />
+              < Menu theme="light" mode="inline" defaultSelectedKeys={this.props.page} >
+                <Menu.Item key="1">
+                  <Link className="sider-menu-link" to="/">
+                    <Icon type="home" />
+                    <span className="nav-text">Accueil</span>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item key="2">
+                  <Link className="sider-menu-link" to="/blog/">
+                    <Icon type="book" />
+                    <span className="nav-text">Blog</span>
+                  </Link>
+
+                </Menu.Item>
+                <Menu.Item key="3">
+                  <Link className="sider-menu-link" to="/contact/">
+                    <Icon type="mail" />
+                    <span className="nav-text">Contact</span>
+                  </Link>
+                </Menu.Item>
+              </Menu >
             </Sider>
             <Content>{[children, page]}</Content>
           </Layout>
