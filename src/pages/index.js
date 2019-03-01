@@ -15,7 +15,7 @@ class IndexPage extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <AppLayout page="1" location={this.props.location} title={siteTitle}>
+      <AppLayout page="home" location={this.props.location} title={siteTitle}>
         <SEO
           title="Latest posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}

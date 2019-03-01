@@ -46,54 +46,50 @@ class AppLayout extends React.Component {
     }
 
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: `1200px`,
-
-        }}
-      >
+      <Layout style={{
+        marginLeft: `auto`,
+        marginRight: `auto`,
+        maxWidth: `1200px`,
+        minHeight: `100vh`
+      }}>
+        <Header>{header}</Header>
         <Layout>
-          <Header>{header}</Header>
-          <Layout>
-            <Sider
-              theme="light"
-              breakpoint="md"
-              collapsedWidth="0"
-              onBreakpoint={(broken) => { console.log(broken); }}
-              onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
-            >
-              <div className="logo" />
-              < Menu theme="light" mode="inline" defaultSelectedKeys={this.props.page} >
-                <Menu.Item key="1">
-                  <Link className="sider-menu-link" to="/">
-                    <Icon type="home" />
-                    <span className="nav-text">Accueil</span>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="2">
-                  <Link className="sider-menu-link" to="/blog/">
-                    <Icon type="book" />
-                    <span className="nav-text">Blog</span>
-                  </Link>
+          <Sider
+            theme="light"
+            breakpoint="md"
+            collapsedWidth="0"
+            onBreakpoint={(broken) => { console.log(broken); }}
+            onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
+          >
+            <div className="logo" />
+            < Menu theme="light" mode="inline" defaultSelectedKeys={[page]} >
+              <Menu.Item key="home">
+                <Link className="sider-menu-link" to="/">
+                  <Icon type="home" />
+                  <span className="nav-text">Accueil</span>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="blog">
+                <Link className="sider-menu-link" to="/blog/">
+                  <Icon type="book" />
+                  <span className="nav-text">Blog</span>
+                </Link>
 
-                </Menu.Item>
-                <Menu.Item key="3">
-                  <Link className="sider-menu-link" to="/contact/">
-                    <Icon type="mail" />
-                    <span className="nav-text">Contact</span>
-                  </Link>
-                </Menu.Item>
-              </Menu >
-            </Sider>
-            <Content>{[children, page]}</Content>
-          </Layout>
-          <Footer>
-            <FooterSite />
-          </Footer>
+              </Menu.Item>
+              <Menu.Item key="contact">
+                <Link className="sider-menu-link" to="/contact/">
+                  <Icon type="mail" />
+                  <span className="nav-text">Contact</span>
+                </Link>
+              </Menu.Item>
+            </Menu >
+          </Sider>
+          <Content>{children}</Content>
         </Layout>
-      </div >
+        <Footer>
+          <FooterSite />
+        </Footer>
+      </Layout>
     )
   }
 }

@@ -13,7 +13,7 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <AppLayout page="2" location={this.props.location} title={siteTitle}>
+      <AppLayout page="blog" location={this.props.location} title={siteTitle}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
