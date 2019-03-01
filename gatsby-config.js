@@ -77,7 +77,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-less',
       options: {
-        modifyVars: require('./src/theme/index.js'),
+        modifyVars: require('./src/theme/antd.js'),
         javascriptEnabled: true,
       }
     },
