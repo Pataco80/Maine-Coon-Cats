@@ -23,7 +23,6 @@ class IndexPage extends React.Component {
         <Bio />
 
         <Row className="latest-post" type="flex" justify="center" gutter={16}>
-
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             const { Meta } = Card;
@@ -32,7 +31,6 @@ class IndexPage extends React.Component {
                 <Card hoverable key={node.fields.slug}
                   cover={<Image sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />}
                 >
-
                   <Meta
                     title={
                       <div>
@@ -48,18 +46,14 @@ class IndexPage extends React.Component {
                         <small className="date">{node.frontmatter.date}</small>
                       </div>
                     }
-
                     date={<small>{node.frontmatter.date}</small>}
                     description={<p dangerouslySetInnerHTML={{ __html: node.excerpt }} />}
                   />
                 </Card>
-
               </Col>
-
             )
           })}
         </Row>
-
       </AppLayout>
     )
   }

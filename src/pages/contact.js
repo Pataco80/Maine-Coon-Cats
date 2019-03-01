@@ -102,7 +102,6 @@ export default class ContactPage extends React.Component {
   }
 }
 
-
 export const pageQuery = graphql`
   query ContactQuery {
     site {

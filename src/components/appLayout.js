@@ -1,5 +1,4 @@
 import React from "react"
-//import { rhythm, scale } from "../utils/typography"
 import { Link } from "gatsby"
 
 import MainNavigation from "./mainNavigation"
@@ -25,7 +24,7 @@ class AppLayout extends React.Component {
   }
 
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, page } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -71,18 +70,10 @@ class AppLayout extends React.Component {
             </Sider>
             <Content>{children}</Content>
           </Layout>
-
-
-
-
           <Footer>
             <FooterSite />
           </Footer>
         </Layout>
-
-
-
-
       </div >
     )
   }

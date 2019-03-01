@@ -34,7 +34,6 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-
         <ul
           style={{
             display: `flex`,
@@ -59,7 +58,6 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
-
       </AppLayout>
     )
   }
