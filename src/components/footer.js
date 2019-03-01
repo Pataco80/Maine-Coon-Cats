@@ -16,4 +16,3 @@ class FooterSite extends React.Component {
 }
 
 export default FooterSite
-
