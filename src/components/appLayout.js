@@ -69,12 +69,17 @@ class AppLayout extends React.Component {
                   <span className="nav-text">Accueil</span>
                 </Link>
               </Menu.Item>
+              <Menu.Item key="about">
+                <Link className="sider-menu-link" to="/">
+                  <Icon type="user" />
+                  <span className="nav-text">A Propos</span>
+                </Link>
+              </Menu.Item>
               <Menu.Item key="blog">
                 <Link className="sider-menu-link" to="/blog/">
                   <Icon type="book" />
                   <span className="nav-text">Blog</span>
                 </Link>
-
               </Menu.Item>
               <Menu.Item key="contact">
                 <Link className="sider-menu-link" to="/contact/">
