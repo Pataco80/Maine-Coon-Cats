@@ -68,7 +68,7 @@ class AppLayout extends React.Component {
               <div className="logo" />
               <MainNavigation />
             </Sider>
-            <Content>{children}</Content>
+            <Content>{[children, page]}</Content>
           </Layout>
           <Footer>
             <FooterSite />

@@ -3,9 +3,10 @@ import { Link } from "gatsby"
 import { Menu, Icon } from "antd"
 
 class MainNavigation extends React.Component {
+
   render() {
     return (
-      < Menu theme="light" mode="inline" defaultSelectedKeys={[page]} >
+      < Menu theme="light" mode="inline" defaultSelectedKeys={this.props.page} >
         <Menu.Item key="1">
           <Link className="sider-menu-link" to="/">
             <Icon type="home" />
