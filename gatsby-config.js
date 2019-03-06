@@ -10,17 +10,17 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-less',
+      resolve: "gatsby-plugin-less",
       options: {
-        modifyVars: require('./src/theme/antd.js'),
+        modifyVars: require("./src/theme/antd.js"),
         javascriptEnabled: true,
-      }
+      },
     },
     {
-      resolve: 'gatsby-plugin-antd',
+      resolve: "gatsby-plugin-antd",
       options: {
         style: true,
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
