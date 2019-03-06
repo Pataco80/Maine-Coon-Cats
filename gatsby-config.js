@@ -10,6 +10,19 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-less',
+      options: {
+        modifyVars: require('./src/theme/antd.js'),
+        javascriptEnabled: true,
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-antd',
+      options: {
+        style: true,
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -73,19 +86,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-less',
-      options: {
-        modifyVars: require('./src/theme/antd.js'),
-        javascriptEnabled: true,
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-antd',
-      options: {
-        style: true,
-      }
     }
   ],
 }

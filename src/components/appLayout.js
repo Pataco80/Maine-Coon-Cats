@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import FooterSite from "./footer"
 import { Layout, Menu, Icon } from "antd"
-import "./layout.css"
+//import "./layout.css"
 
 
 const {
